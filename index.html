@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>генератор</title>
+  </head>
+  <body>
+    <h1>Text shadow generator</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary">настройки</div>
+            <div class="card-body">
+              <label for="font_size">Размер шрифта</label>
+              <input
+                class="form-range"
+                id="font_size"
+                type="range"
+                min="8"
+                max="40"
+                step="1"
+                value="40"
+              />
+              <label for="offset_x">Смещение по оси Х</label>
+              <input
+                class="form-range"
+                id="offset_x"
+                type="range"
+                min="-15"
+                max="15"
+                step="1"
+                value="4"
+              />
+              <label for="offset_y">Смещение по оси У</label>
+              <input
+                class="form-range"
+                id="offset_y"
+                type="range"
+                min="-15"
+                max="15"
+                step="1"
+                value="-1"
+              />
+              <label for="blure">Размытие</label>
+              <input
+                class="form-range"
+                id="blure"
+                type="range"
+                min="0"
+                max="15"
+                step="1"
+                value="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="card">
+            <div class="card-header bg-primary">цвет</div>
+            <div class="card-body">
+              <input type="color" value="#ffff" />
+              <label for="opacity">прозрачность</label>
+              <input
+                class="form-range"
+                id="opacity"
+                type="range"
+                min="-0"
+                max="1"
+                step="0.1"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-12">
+          <div class="card">
+            <div class="card-header bg-primary">результат</div>
+            <label for="opacity">цвет в hex</label>
+            <textarea id="resultHex" rows="4" readonly></textarea>
+            <label for="opacity">цвет в rgba</label>
+            <textarea id="resultrgba" rows="3" readonly></textarea>
+            <div class="card-body"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
